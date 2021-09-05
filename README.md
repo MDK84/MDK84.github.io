@@ -8,7 +8,8 @@
 
 ## Thanks to
 
-- [mmdbalkhi](https://github.com/KomeilParseh)
+- ![picture](https://avatars.githubusercontent.com/komeilparseh?size=25)
+[mmdbalkhi](https://github.com/KomeilParseh)
 
 ## Powered by
 
