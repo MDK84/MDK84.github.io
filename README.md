@@ -1,5 +1,7 @@
 # MDK's blog
 
+[![CodeFactor](https://www.codefactor.io/repository/github/mdk1384/mdk1384.github.io/badge)](https://www.codefactor.io/repository/github/mdk1384/mdk1384.github.io)
+
 - [My blog in Github](https://mdk1384.github.io)
 
 - [My blog in Virgool (Persian)](https://virgool.io/@MDK)
