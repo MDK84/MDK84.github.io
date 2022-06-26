@@ -1,8 +1,5 @@
 # MDK's blog
-
-[![CodeFactor](https://www.codefactor.io/repository/github/mdk84/mdk84.github.io/badge)](https://www.codefactor.io/repository/github/mdk84/mdk84.github.io)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/43f18c23d60c4fbd9ecbdaabbfa02fc8)](https://app.codacy.com/gh/mdk84/mdk84.github.io?utm_source=github.com&utm_medium=referral&utm_content=mdk84/mdk84.github.io&utm_campaign=Badge_Grade_Settings)
-
+Hello I'm MDK and this is a blog for anything related to technology, coding, etc.
 - [My blog in Github](https://mdk84.github.io)
 
 - [My blog in Virgool (Persian)](https://virgool.io/@MDK)
