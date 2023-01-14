@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://mdk84.github.io/sitemap.xml
