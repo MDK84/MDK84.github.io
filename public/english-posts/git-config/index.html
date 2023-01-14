@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Git Configuration | MDK</title>
+<meta name="keywords" content="">
+<meta name="description" content="First-Time Git Setup Now that you have Git on your system, you’ll want to do a few things to customize your Git environment. You should have to do these things only once on any given computer; they’ll stick around between upgrades. You can also change them at any time by running through the commands again.
+Git comes with a tool called git config that lets you get and set configuration variables that control all aspects of how Git looks and operates.">
+<meta name="author" content="">
+<link rel="canonical" href="https://mdk84.github.io/english-posts/git-config/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.96899f97d8f8189d0ff2f895ef7d104ef2a38fa0104562f554c249c6476eda64.css" integrity="sha256-lomfl9j4GJ0P8viV730QTvKjj6AQRWL1VMJJxkdu2mQ=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://mdk84.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://mdk84.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://mdk84.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://mdk84.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://mdk84.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Git Configuration" />
+<meta property="og:description" content="First-Time Git Setup Now that you have Git on your system, you’ll want to do a few things to customize your Git environment. You should have to do these things only once on any given computer; they’ll stick around between upgrades. You can also change them at any time by running through the commands again.
+Git comes with a tool called git config that lets you get and set configuration variables that control all aspects of how Git looks and operates." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mdk84.github.io/english-posts/git-config/" /><meta property="og:image" content="https://mdk84.github.io/104"/><meta property="article:section" content="English Posts" />
+<meta property="article:published_time" content="2023-01-14T17:51:12+03:30" />
+<meta property="article:modified_time" content="2023-01-14T17:51:12+03:30" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mdk84.github.io/104"/>
+
+<meta name="twitter:title" content="Git Configuration"/>
+<meta name="twitter:description" content="First-Time Git Setup Now that you have Git on your system, you’ll want to do a few things to customize your Git environment. You should have to do these things only once on any given computer; they’ll stick around between upgrades. You can also change them at any time by running through the commands again.
+Git comes with a tool called git config that lets you get and set configuration variables that control all aspects of how Git looks and operates."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Git Configuration",
+      "item": "https://mdk84.github.io/english-posts/git-config/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Git Configuration",
+  "name": "Git Configuration",
+  "description": "First-Time Git Setup Now that you have Git on your system, you’ll want to do a few things to customize your Git environment. You should have to do these things only once on any given computer; they’ll stick around between upgrades. You can also change them at any time by running through the commands again.\nGit comes with a tool called git config that lets you get and set configuration variables that control all aspects of how Git looks and operates.",
+  "keywords": [
+    
+  ],
+  "articleBody": "First-Time Git Setup Now that you have Git on your system, you’ll want to do a few things to customize your Git environment. You should have to do these things only once on any given computer; they’ll stick around between upgrades. You can also change them at any time by running through the commands again.\nGit comes with a tool called git config that lets you get and set configuration variables that control all aspects of how Git looks and operates. These variables can be stored in three different places:\n[path]/etc/gitconfig file: Contains values applied to every user on the system and all their repositories. If you pass the option --system to git config, it reads and writes from this file specifically. Because this is a system configuration file, you would need administrative or superuser privilege to make changes to it.\n~/.gitconfig or ~/.config/git/config file: Values specific personally to you, the user. You can make Git read and write to this file specifically by passing the --global option, and this affects all of the repositories you work with on your system.\nconfig file in the Git directory (that is, .git/config) of whatever repository you’re currently using: Specific to that single repository. You can force Git to read from and write to this file with the --local option, but that is in fact the default. Unsurprisingly, you need to be located somewhere in a Git repository for this option to work properly.\nEach level overrides values in the previous level, so values in .git/config trump those in [path]/etc/gitconfig.\nOn Windows systems, Git looks for the .gitconfig file in the $HOME directory (C:\\Users\\$USER for most people). It also still looks for [path]/etc/gitconfig, although it’s relative to the MSys root, which is wherever you decide to install Git on your Windows system when you run the installer. If you are using version 2.x or later of Git for Windows, there is also a system-level config file at C:\\Documents and Settings\\All Users\\Application Data\\Git\\config on Windows XP, and in C:\\ProgramData\\Git\\config on Windows Vista and newer. This config file can only be changed by git config -f as an admin.\nYou can view all of your settings and where they are coming from using:\n$ git config --list --show-origin Your Identity The first thing you should do when you install Git is to set your user name and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating:\n$ git config --global user.name \"John Doe\" $ git config --global user.email johndoe@example.com Again, you need to do this only once if you pass the --global option, because then Git will always use that information for anything you do on that system. If you want to override this with a different name or email address for specific projects, you can run the command without the --global option when you’re in that project.\nMany of the GUI tools will help you do this when you first run them.\nYour Editor Now that your identity is set up, you can configure the default text editor that will be used when Git needs you to type in a message. If not configured, Git uses your system’s default editor.\nIf you want to use a different text editor, such as Emacs, you can do the following:\n$ git config --global core.editor emacs On a Windows system, if you want to use a different text editor, you must specify the full path to its executable file. This can be different depending on how your editor is packaged.\nIn the case of Notepad++, a popular programming editor, you are likely to want to use the 32-bit version, since at the time of writing the 64-bit version doesn’t support all plug-ins. If you are on a 32-bit Windows system, or you have a 64-bit editor on a 64-bit system, you’ll type something like this:\n$ git config --global core.editor \"'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin\" Note: Vim, Emacs and Notepad++ are popular text editors often used by developers on Unix-based systems like Linux and macOS or a Windows system. If you are using another editor, or a 32-bit version, please find specific instructions for how to set up your favorite editor with Git in git config core.editor commands.\nWarning: You may find, if you don’t setup your editor like this, you get into a really confusing state when Git attempts to launch it. An example on a Windows system may include a prematurely terminated Git operation during a Git initiated edit.\nYour default branch name By default Git will create a branch called master when you create a new repository with git init. From Git version 2.28 onwards, you can set a different name for the initial branch.\nTo set main as the default branch name do:\n$ git config --global init.defaultBranch main Checking Your Settings If you want to check your configuration settings, you can use the git config --list command to list all the settings Git can find at that point:\n$ git config --list user.name=John Doe user.email=johndoe@example.com color.status=auto color.branch=auto color.interactive=auto color.diff=auto ... You may see keys more than once, because Git reads the same key from different files ([path]/etc/gitconfig and ~/.gitconfig, for example). In this case, Git uses the last value for each unique key it sees.\nYou can also check what Git thinks a specific key’s value is by typing git config :\n$ git config user.name John Doe ",
+  "wordCount" : "911",
+  "inLanguage": "en",
+  "datePublished": "2023-01-14T17:51:12+03:30",
+  "dateModified": "2023-01-14T17:51:12+03:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mdk84.github.io/english-posts/git-config/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MDK",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mdk84.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://mdk84.github.io" accesskey="h" title="MDK (Alt + H)">MDK</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://mdk84.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mdk84.github.io/english-posts/" title="English Posts">
+                    <span>English Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mdk84.github.io/farsi-posts/" title="Farsi Posts">
+                    <span>Farsi Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mdk84.github.io/aboutme/" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mdk84.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://mdk84.github.io">Home</a></div>
+    <h1 class="post-title">
+      Git Configuration
+    </h1>
+    <div class="post-meta"><span title='2023-01-14 17:51:12 +0330 +0330'>January 14, 2023</span>&nbsp;·&nbsp;5 min
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="first-time-git-setup">First-Time Git Setup<a hidden class="anchor" aria-hidden="true" href="#first-time-git-setup">#</a></h2>
+<p>Now that you have Git on your system, you’ll want to do a few things to customize your Git environment. You should have to do these things only once on any given computer; they’ll stick around between upgrades. You can also change them at any time by running through the commands again.</p>
+<p>Git comes with a tool called git config that lets you get and set configuration variables that control all aspects of how Git looks and operates. These variables can be stored in three different places:</p>
+<ol>
+<li>
+<p>[path]/etc/gitconfig file: Contains values applied to every user on the system and all their repositories. If you pass the option <code>--system</code> to git config, it reads and writes from this file specifically. Because this is a system configuration file, you would need administrative or superuser privilege to make changes to it.</p>
+</li>
+<li>
+<p>~/.gitconfig or ~/.config/git/config file: Values specific personally to you, the user. You can make Git read and write to this file specifically by passing the <code>--global</code> option, and this affects all of the repositories you work with on your system.</p>
+</li>
+<li>
+<p>config file in the Git directory (that is, .git/config) of whatever repository you’re currently using: Specific to that single repository. You can force Git to read from and write to this file with the <code>--local</code> option, but that is in fact the default. Unsurprisingly, you need to be located somewhere in a Git repository for this option to work properly.</p>
+</li>
+</ol>
+<p>Each level overrides values in the previous level, so values in .git/config trump those in [path]/etc/gitconfig.</p>
+<p>On Windows systems, Git looks for the .gitconfig file in the <code>$HOME</code> directory (<code>C:\Users\$USER</code> for most people). It also still looks for [path]/etc/gitconfig, although it’s relative to the MSys root, which is wherever you decide to install Git on your Windows system when you run the installer. If you are using version 2.x or later of Git for Windows, there is also a system-level config file at <code>C:\Documents and Settings\All Users\Application Data\Git\config</code> on Windows XP, and in <code>C:\ProgramData\Git\config</code> on Windows Vista and newer. This config file can only be changed by <code>git config -f &lt;file&gt;</code> as an admin.</p>
+<p>You can view all of your settings and where they are coming from using:</p>
+<pre><code>$ git config --list --show-origin
+</code></pre>
+<h2 id="your-identity">Your Identity<a hidden class="anchor" aria-hidden="true" href="#your-identity">#</a></h2>
+<p>The first thing you should do when you install Git is to set your user name and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating:</p>
+<pre><code>$ git config --global user.name &quot;John Doe&quot;
+$ git config --global user.email johndoe@example.com
+</code></pre>
+<p>Again, you need to do this only once if you pass the <code>--global</code> option, because then Git will always use that information for anything you do on that system. If you want to override this with a different name or email address for specific projects, you can run the command without the <code>--global</code> option when you’re in that project.</p>
+<p>Many of the GUI tools will help you do this when you first run them.</p>
+<h2 id="your-editor">Your Editor<a hidden class="anchor" aria-hidden="true" href="#your-editor">#</a></h2>
+<p>Now that your identity is set up, you can configure the default text editor that will be used when Git needs you to type in a message. If not configured, Git uses your system’s default editor.</p>
+<p>If you want to use a different text editor, such as Emacs, you can do the following:</p>
+<pre><code>$ git config --global core.editor emacs
+</code></pre>
+<p>On a Windows system, if you want to use a different text editor, you must specify the full path to its executable file. This can be different depending on how your editor is packaged.</p>
+<p>In the case of Notepad++, a popular programming editor, you are likely to want to use the 32-bit version, since at the time of writing the 64-bit version doesn’t support all plug-ins. If you are on a 32-bit Windows system, or you have a 64-bit editor on a 64-bit system, you’ll type something like this:</p>
+<pre><code>$ git config --global core.editor &quot;'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin&quot;
+</code></pre>
+<p><strong>Note:</strong>
+Vim, Emacs and Notepad++ are popular text editors often used by developers on Unix-based systems like Linux and macOS or a Windows system. If you are using another editor, or a 32-bit version, please find specific instructions for how to set up your favorite editor with Git in git config core.editor commands.</p>
+<p><strong>Warning:</strong>
+You may find, if you don’t setup your editor like this, you get into a really confusing state when Git attempts to launch it. An example on a Windows system may include a prematurely terminated Git operation during a Git initiated edit.</p>
+<h2 id="your-default-branch-name">Your default branch name<a hidden class="anchor" aria-hidden="true" href="#your-default-branch-name">#</a></h2>
+<p>By default Git will create a branch called master when you create a new repository with <code>git init</code>. From Git version 2.28 onwards, you can set a different name for the initial branch.</p>
+<p>To set main as the default branch name do:</p>
+<pre><code>$ git config --global init.defaultBranch main
+</code></pre>
+<h2 id="checking-your-settings">Checking Your Settings<a hidden class="anchor" aria-hidden="true" href="#checking-your-settings">#</a></h2>
+<p>If you want to check your configuration settings, you can use the <code>git config --list</code> command to list all the settings Git can find at that point:</p>
+<pre><code>$ git config --list
+user.name=John Doe
+user.email=johndoe@example.com
+color.status=auto
+color.branch=auto
+color.interactive=auto
+color.diff=auto
+...
+</code></pre>
+<p>You may see keys more than once, because Git reads the same key from different files ([path]/etc/gitconfig and ~/.gitconfig, for example). In this case, Git uses the last value for each unique key it sees.</p>
+<p>You can also check what Git thinks a specific key’s value is by typing <code>git config &lt;key&gt;</code>:</p>
+<pre><code>$ git config user.name
+John Doe
+</code></pre>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer><script src="https://utteranc.es/client.js"
+        repo="MDK84/MDK84.github.io"
+        issue-term="url"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://mdk84.github.io">MDK</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

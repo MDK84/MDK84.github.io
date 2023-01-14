@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MDK</title>
+    <link>https://mdk84.github.io/</link>
+    <description>Recent content on MDK</description>
+    <image>
+      <url>https://mdk84.github.io/104</url>
+      <link>https://mdk84.github.io/104</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Jan 2023 17:51:12 +0330</lastBuildDate><atom:link href="https://mdk84.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Configuration</title>
+      <link>https://mdk84.github.io/english-posts/git-config/</link>
+      <pubDate>Sat, 14 Jan 2023 17:51:12 +0330</pubDate>
+      
+      <guid>https://mdk84.github.io/english-posts/git-config/</guid>
+      <description>First-Time Git Setup Now that you have Git on your system, you’ll want to do a few things to customize your Git environment. You should have to do these things only once on any given computer; they’ll stick around between upgrades. You can also change them at any time by running through the commands again.
+Git comes with a tool called git config that lets you get and set configuration variables that control all aspects of how Git looks and operates.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://mdk84.github.io/aboutme/</link>
+      <pubDate>Sat, 14 Jan 2023 16:14:32 +0330</pubDate>
+      
+      <guid>https://mdk84.github.io/aboutme/</guid>
+      <description>Hello there. I&amp;rsquo;m MDK. I&amp;rsquo;m :
+a student a programmer interested in Python and C# </description>
+    </item>
+    
+    <item>
+      <title>Git Configuration</title>
+      <link>https://mdk84.github.io/farsi-posts/git-config/</link>
+      <pubDate>Sat, 14 Jan 2023 02:01:32 +0330</pubDate>
+      
+      <guid>https://mdk84.github.io/farsi-posts/git-config/</guid>
+      <description>حالا که گیت را در سیستم خود دارید، وقت آن است که چند شخصی سازی در محیط گیت تان انجام دهید .باید این کار ها را فقط یک بار به ازای هر کامپیوتری انجام دهید. این تنظیمات با بروزرسانی ها از بین نمی رود
+همچنین می توانید هر زمان که خواستید آنها را با اجرای دوباره دستورات تغییر دهید
+Git Config گیت با ابزاری به نام
+ارائه می شود، که به شما امکان تنظیم و خواندن متغیر های پیکربندی که تمام جوانب کاری گیت و ظاهر آن را مدیریت می کنند را می دهد.</description>
+    </item>
+    
+    
+  </channel>
+</rss>

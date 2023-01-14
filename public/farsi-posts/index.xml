@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Farsi Posts on MDK</title>
+    <link>https://mdk84.github.io/farsi-posts/</link>
+    <description>Recent content in Farsi Posts on MDK</description>
+    <image>
+      <url>https://mdk84.github.io/104</url>
+      <link>https://mdk84.github.io/104</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Jan 2023 02:01:32 +0330</lastBuildDate><atom:link href="https://mdk84.github.io/farsi-posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Configuration</title>
+      <link>https://mdk84.github.io/farsi-posts/git-config/</link>
+      <pubDate>Sat, 14 Jan 2023 02:01:32 +0330</pubDate>
+      
+      <guid>https://mdk84.github.io/farsi-posts/git-config/</guid>
+      <description>حالا که گیت را در سیستم خود دارید، وقت آن است که چند شخصی سازی در محیط گیت تان انجام دهید .باید این کار ها را فقط یک بار به ازای هر کامپیوتری انجام دهید. این تنظیمات با بروزرسانی ها از بین نمی رود
+همچنین می توانید هر زمان که خواستید آنها را با اجرای دوباره دستورات تغییر دهید
+Git Config گیت با ابزاری به نام
+ارائه می شود، که به شما امکان تنظیم و خواندن متغیر های پیکربندی که تمام جوانب کاری گیت و ظاهر آن را مدیریت می کنند را می دهد.</description>
+    </item>
+    
+  </channel>
+</rss>
