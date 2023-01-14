@@ -1,10 +1,12 @@
 baseURL: "https://mdk84.github.io"
 languageCode: "en-us"
 title: "MDK"
-image: "https://avatars.githubusercontent.com/u/66082748?v=4" # optional
 theme: "PaperMod"
+enableRobotsTXT: true
 
 params:
+    images: "https://avatars.githubusercontent.com/u/66082748?v=4"
+    defaultTheme: auto
     profileMode:
             enabled: true
             title: "Hi, I'm MDK." # optional default will be site title
