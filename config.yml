@@ -15,7 +15,7 @@ params:
             imageWidth: 120 # custom size
             imageHeight: 120 # custom size
             buttons:
-                - name: Repository Source
+                - name: Source in Github
                   url: "https://github.com/MDK84/MDK84.github.io"
     socialIcons: # optional
         - name: "Email"
