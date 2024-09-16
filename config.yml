@@ -18,21 +18,21 @@ params:
   favicons:
     use: true
     metas: |2-
-              <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
-              <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
-              <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
-              <link rel="manifest" href="/static/favicon/site.webmanifest">
-              <link rel="shortcut icon" href="/static/favicon/favicon.ico">
+              <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+              <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+              <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+              <link rel="manifest" href="site.webmanifest">
+              <link rel="shortcut icon" href="favicon.ico">
 
   profile:
     name: "MDK"
     tagline: A student
     # location: "Earth"
-    photo: "/static/images/profile.jpg"
+    photo: "profile.jpg"
   social:
     title: Links
     list:
-      - icon: fa-envelope
+      - icon: fa fa-envelope
         url: "mailto:mdk84@duck.com"
         title: Email
       - icon: fab fa-linkedin-in
@@ -73,22 +73,22 @@ params:
         a programmer
         a gamer
         interested in Python"
-  experience:
-    title: Experiences
-    icon: fas fa-briefcase
-    list:
-      - position: Job Title
-        dates: 2019 - *Present*
-        company: Company Name
-        details: |1-
-          - Printed from desktop. Sent [emails](#).
-              - Called people *using* telephone.
-          - Drank water from office cooler.
-          - Ate donuts on people's birthdays.
-      - position: Job Title
-        dates: 2018 - 2019
-        url: "#"
-        company: Company Name
+  # experience:
+  #   title: Experiences
+  #   icon: fas fa-briefcase
+  #   list:
+  #     - position: Job Title
+  #       dates: 2019 - *Present*
+  #       company: Company Name
+  #       details: |1-
+  #         - Printed from desktop. Sent [emails](#).
+  #             - Called people *using* telephone.
+  #         - Drank water from office cooler.
+  #         - Ate donuts on people's birthdays.
+  #     - position: Job Title
+  #       dates: 2018 - 2019
+  #       url: "#"
+  #       company: Company Name
   education:
     title: Education
     icon: fas fa-graduation-cap
