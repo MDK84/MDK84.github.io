@@ -59,9 +59,9 @@ params:
   showInAccordion:
     - item: aboutme
       expand: true
-    - item: experience
+    # - item: experience
     - item: education
-    - item: publication
+    # - item: publication
     - item: project
     - item: skill
     - item: hobby
