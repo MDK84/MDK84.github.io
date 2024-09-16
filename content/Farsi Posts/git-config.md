@@ -3,6 +3,18 @@ title: "Git Configuration"
 date: 2023-01-14T02:01:32+03:30
 draft: false
 searchHidden: false
+tags: ["git", "programming"]
+author: "Me"
+showToc: true
+TocOpen: false
+draft: false
+hidemeta: false
+description: "تنظیم کردن گیت بعد از نصب"
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+ShowRssButtonInSectionTermList: true
+UseHugoToc: true
 ---
 <style>
     body{font-family: 'Vazir'; text-align: right;}

@@ -2,6 +2,19 @@
 title: "Git Configuration"
 date: 2023-01-14T17:51:12+03:30
 draft: false
+searchHidden: false
+tags: ["git", "programming"]
+author: "Me"
+showToc: true
+TocOpen: false
+draft: false
+hidemeta: false
+description: "Configuring git after installation"
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+ShowRssButtonInSectionTermList: true
+UseHugoToc: true
 ---
 ## First-Time Git Setup
 Now that you have Git on your system, you’ll want to do a few things to customize your Git environment. You should have to do these things only once on any given computer; they’ll stick around between upgrades. You can also change them at any time by running through the commands again.
