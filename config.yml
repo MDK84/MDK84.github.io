@@ -18,11 +18,11 @@ params:
   favicons:
     use: true
     metas: |2-
-              <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-              <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-              <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-              <link rel="manifest" href="site.webmanifest">
-              <link rel="shortcut icon" href="favicon.ico">
+              <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+              <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+              <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+              <link rel="manifest" href="favicon/site.webmanifest">
+              <link rel="shortcut icon" href="favicon/favicon.ico">
 
   profile:
     name: "MDK"
@@ -68,11 +68,7 @@ params:
   aboutme:
     title: About Me
     icon: fas fa-user
-    description: "Hello there. I’m MDK. I’m :
-        a student
-        a programmer
-        a gamer
-        interested in Python"
+    description: "Hello there. I’m MDK."
   # experience:
   #   title: Experiences
   #   icon: fas fa-briefcase
