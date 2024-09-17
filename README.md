@@ -1,12 +1,12 @@
 # MDK's blog
-Hello I'm MDK and this is a blog for anything related to technology, coding, etc.
+Hello there and welcome to my blog. The blog's subject is everything related to technology, coding, etc.
 - [My blog in Github](https://mdk84.github.io)
 
-- [My page on Virgool (Persian)](https://virgool.io/@MDK)
+- [My page on Virgool (Farsi)](https://virgool.io/@MDK)
 
 ## Thanks to
 
-- ![picture](https://avatars.githubusercontent.com/mmdbalkhi?size=25)
+- ![picture](https://avatars.githubusercontent.com/mmdbalkhi?size=26)
 [mmdbalkhi](https://github.com/mmdbalkhi)
 
-Powered by [Hugo-aafu](https://github.com/darshanbaral/aafu) and [uuteranc](https://utteranc.es/)
+Powered by [Hugo](https://github.com/gohugoio/hugo), [aafu](https://github.com/darshanbaral/aafu) and [uuteranc (comment section of the blog)](https://utteranc.es/)
