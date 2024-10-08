@@ -68,7 +68,7 @@ params:
   aboutme:
     title: About Me
     icon: fas fa-user
-    description: "Hello there. I’m MDK."
+    description: "Hello there. I’m MDK. I'm interested in science and also programming. I've gotten my diploma of science from Allameh Amini Highschool. I have also made a mobile game that is called 'Covid 19'. The purpose of making the game was informing others about the dangers of the virus and recommending people to wear mask outside and wash their hands. It was developed by our team of 3 people called 'Doostan Khaas'. A friend of mine and I were coding the game and another friend of mine was working on music and debugging it. I have experienced making websites and working with HTML, CSS and JS. I have worked with programming languages, like Python, C#, C++ and Java, but my main programming language is Python. I have worked on a short film in 2018. It's name is 'The Dark Way'. It's goal was to warn others about the problems of social network addiction and the content you see on the internet and suggesting them to try to talk to psychologists."
   # experience:
   #   title: Experiences
   #   icon: fas fa-briefcase
@@ -159,17 +159,16 @@ params:
     panelId: skill-panel
     icon: fas fa-cogs
     list:
-      - skill: "12th year of studying"
-        skillrating: 100
       - skill: Waiting for the exam's result
-        skillrating: 25
+        skillrating: 95
       # - skill: Skill 4
       #   skillrating: 50
   hobby:
     title: Hobbies
     icon: fas fa-gamepad
     list:
-      - hobby: Playing video games
+      - hobby: Playing video games (mostly Counter-Strike 2 theese days)
+      - hobby: Programming
       - hobby: Listening to music
       - hobby: Learning English
 # menu :
