@@ -6,7 +6,6 @@ Hello there and welcome to my blog. The blog's subject is everything related to 
 
 ## Thanks to
 
-- ![picture](https://avatars.githubusercontent.com/mmdbalkhi?size=26)
 [mmdbalkhi](https://github.com/mmdbalkhi)
 
 Powered by [Hugo](https://github.com/gohugoio/hugo), [aafu](https://github.com/darshanbaral/aafu) and [uuteranc (comment section of the blog)](https://utteranc.es/)
